@@ -1,0 +1,71 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="TrellisBuilder" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_ctrl_none" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="return"/>
+            </pragma>
+        </directive>
+        <directive functionName="TrellisBuilder" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="choice"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="TrellisBuilder" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="choice"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="TrellisBuilder" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="ppMT"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="TrellisBuilder" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="ppMT"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="16"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="TrellisBuilder" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="prevState"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="TrellisBuilder" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="prevState"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="16"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="TrellisBuilder" label="move" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="TrellisBuilder" label="findStartState" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="TrellisBuilder" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="TrellisBuilder"/>
+            </pragma>
+        </directive>
+        <directive functionName="TrellisBuilder" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="TrellisBuilder"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+
