@@ -1,0 +1,489 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcvu19p-fsva3824-2-e</Part>
+        <TopModelName>TrellisBuilder</TopModelName>
+        <TargetClockPeriod>6.36</TargetClockPeriod>
+        <ClockUncertainty>1.72</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>4.582</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>20</Best-caseLatency>
+            <Average-caseLatency>20</Average-caseLatency>
+            <Worst-caseLatency>20</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.127 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.127 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.127 us</Worst-caseRealTimeLatency>
+            <Interval-min>21</Interval-min>
+            <Interval-max>21</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>233</FF>
+            <LUT>3989</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4320</BRAM_18K>
+            <DSP>3840</DSP>
+            <FF>8171520</FF>
+            <LUT>4085760</LUT>
+            <URAM>320</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>TrellisBuilder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>TrellisBuilder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>In_EncodeStream</name>
+            <Object>In_EncodeStream</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>24</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Outdecode_i</name>
+            <Object>Outdecode</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_ovld</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Outdecode_o</name>
+            <Object>Outdecode</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_ovld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Outdecode_o_ap_vld</name>
+            <Object>Outdecode</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_ovld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>TrellisBuilder</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_TrellisBuilder_Pipeline_TrellisLoop_fu_489</InstName>
+                    <ModuleName>TrellisBuilder_Pipeline_TrellisLoop</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>489</ID>
+                    <BindInstances>z_2_fu_2874_p2 sub_ln825_fu_2937_p2 count000_V_1_fu_2969_p2 add_ln825_fu_2983_p2 count000_V_3_fu_3011_p2 add_ln825_1_fu_3025_p2 count000_V_5_fu_3053_p2 count001_V_1_fu_3073_p2 count002_V_1_fu_3093_p2 count002_V_3_fu_3107_p2 count002_V_5_fu_3121_p2 count010_V_1_fu_3155_p2 count011_V_1_fu_3175_p2 count011_V_3_fu_3189_p2 count011_V_5_fu_3203_p2 count012_V_1_fu_3217_p2 count012_V_3_fu_3231_p2 count013_V_3_fu_3259_p2 count100_V_1_fu_3265_p2 count101_V_1_fu_3285_p2 count101_V_3_fu_3299_p2 count101_V_5_fu_3313_p2 count102_V_1_fu_3327_p2 count102_V_3_fu_3341_p2 count103_V_3_fu_3381_p2 count110_V_1_fu_3387_p2 count110_V_3_fu_3401_p2 count110_V_5_fu_3415_p2 count111_V_1_fu_3429_p2 count112_V_1_fu_3449_p2 count112_V_3_fu_3463_p2 count112_V_5_fu_3477_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_TrellisBuilder_Pipeline_VITIS_LOOP_1453_1_fu_561</InstName>
+                    <ModuleName>TrellisBuilder_Pipeline_VITIS_LOOP_1453_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>561</ID>
+                    <BindInstances>add_ln1492_fu_791_p2 sub_ln1456_fu_800_p2 k_1_fu_1975_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>TrellisBuilder_Pipeline_TrellisLoop</Name>
+            <Loops>
+                <TrellisLoop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>6.36</TargetClockPeriod>
+                    <ClockUncertainty>1.72</ClockUncertainty>
+                    <EstimatedClockPeriod>4.220</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>10</Best-caseLatency>
+                    <Average-caseLatency>10</Average-caseLatency>
+                    <Worst-caseLatency>10</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>63.600 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>63.600 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>63.600 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>10</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <TrellisLoop>
+                        <Name>TrellisLoop</Name>
+                        <TripCount>8</TripCount>
+                        <Latency>8</Latency>
+                        <AbsoluteTimeLatency>50.880 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </TrellisLoop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>181</FF>
+                    <AVAIL_FF>8171520</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>2293</LUT>
+                    <AVAIL_LUT>4085760</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>3840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>320</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="z_2_fu_2874_p2" SOURCE="Decoder.cpp:45" URAM="0" VARIABLE="z_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln825_fu_2937_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_ref.h:825" URAM="0" VARIABLE="sub_ln825"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count000_V_1_fu_2969_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count000_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln825_fu_2983_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_ref.h:825" URAM="0" VARIABLE="add_ln825"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count000_V_3_fu_3011_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count000_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln825_1_fu_3025_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_ref.h:825" URAM="0" VARIABLE="add_ln825_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count000_V_5_fu_3053_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count000_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count001_V_1_fu_3073_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count001_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count002_V_1_fu_3093_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count002_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count002_V_3_fu_3107_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count002_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count002_V_5_fu_3121_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count002_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count010_V_1_fu_3155_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count010_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count011_V_1_fu_3175_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count011_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count011_V_3_fu_3189_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count011_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count011_V_5_fu_3203_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count011_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count012_V_1_fu_3217_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count012_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count012_V_3_fu_3231_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count012_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count013_V_3_fu_3259_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count013_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count100_V_1_fu_3265_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count100_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count101_V_1_fu_3285_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count101_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count101_V_3_fu_3299_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count101_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count101_V_5_fu_3313_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count101_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count102_V_1_fu_3327_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count102_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count102_V_3_fu_3341_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count102_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count103_V_3_fu_3381_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count103_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count110_V_1_fu_3387_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count110_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count110_V_3_fu_3401_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count110_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count110_V_5_fu_3415_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count110_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count111_V_1_fu_3429_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count111_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count112_V_1_fu_3449_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count112_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count112_V_3_fu_3463_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count112_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count112_V_5_fu_3477_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count112_V_5"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>TrellisBuilder_Pipeline_VITIS_LOOP_1453_1</Name>
+            <Loops>
+                <VITIS_LOOP_1453_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>6.36</TargetClockPeriod>
+                    <ClockUncertainty>1.72</ClockUncertainty>
+                    <EstimatedClockPeriod>3.026</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>6</Best-caseLatency>
+                    <Average-caseLatency>6</Average-caseLatency>
+                    <Worst-caseLatency>6</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>38.160 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>38.160 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>38.160 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>6</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_1453_1>
+                        <Name>VITIS_LOOP_1453_1</Name>
+                        <TripCount>4</TripCount>
+                        <Latency>4</Latency>
+                        <AbsoluteTimeLatency>25.440 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_1453_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>31</FF>
+                    <AVAIL_FF>8171520</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1514</LUT>
+                    <AVAIL_LUT>4085760</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>3840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>320</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_1453_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln1492_fu_791_p2" SOURCE="Decoder.cpp:1492" URAM="0" VARIABLE="add_ln1492"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_1453_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1456_fu_800_p2" SOURCE="Decoder.cpp:1456" URAM="0" VARIABLE="sub_ln1456"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_1453_1" OPTYPE="add" PRAGMA="" RTLNAME="k_1_fu_1975_p2" SOURCE="Decoder.cpp:1453" URAM="0" VARIABLE="k_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>TrellisBuilder</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>6.36</TargetClockPeriod>
+                    <ClockUncertainty>1.72</ClockUncertainty>
+                    <EstimatedClockPeriod>4.582</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>20</Best-caseLatency>
+                    <Average-caseLatency>20</Average-caseLatency>
+                    <Worst-caseLatency>20</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.127 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.127 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.127 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>21</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>233</FF>
+                    <AVAIL_FF>8171520</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>3989</LUT>
+                    <AVAIL_LUT>4085760</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>3840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>320</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_op>
+            <ENTRY impl="all mul" latency="-1 mul" op="mul" precision="mul standard"/>
+            <ENTRY impl="all add" latency="-1 add" op="add" precision="add standard"/>
+            <ENTRY impl="all sub" latency="-1 sub" op="sub" precision="sub standard"/>
+            <ENTRY impl="all fadd" latency="-1 fadd" op="fadd" precision="fadd standard"/>
+            <ENTRY impl="all fsub" latency="-1 fsub" op="fsub" precision="fsub standard"/>
+            <ENTRY impl="all fdiv" latency="-1 fdiv" op="fdiv" precision="fdiv standard"/>
+            <ENTRY impl="all fexp" latency="-1 fexp" op="fexp" precision="fexp standard"/>
+            <ENTRY impl="all flog" latency="-1 flog" op="flog" precision="flog standard"/>
+            <ENTRY impl="all fmul" latency="-1 fmul" op="fmul" precision="fmul standard"/>
+            <ENTRY impl="all frsqrt" latency="-1 frsqrt" op="frsqrt" precision="frsqrt standard"/>
+            <ENTRY impl="all frecip" latency="-1 frecip" op="frecip" precision="frecip standard"/>
+            <ENTRY impl="all fsqrt" latency="-1 fsqrt" op="fsqrt" precision="fsqrt standard"/>
+            <ENTRY impl="all dadd" latency="-1 dadd" op="dadd" precision="dadd standard"/>
+            <ENTRY impl="all dsub" latency="-1 dsub" op="dsub" precision="dsub standard"/>
+            <ENTRY impl="all ddiv" latency="-1 ddiv" op="ddiv" precision="ddiv standard"/>
+            <ENTRY impl="all dexp" latency="-1 dexp" op="dexp" precision="dexp standard"/>
+            <ENTRY impl="all dlog" latency="-1 dlog" op="dlog" precision="dlog standard"/>
+            <ENTRY impl="all dmul" latency="-1 dmul" op="dmul" precision="dmul standard"/>
+            <ENTRY impl="all drsqrt" latency="-1 drsqrt" op="drsqrt" precision="drsqrt standard"/>
+            <ENTRY impl="all drecip" latency="-1 drecip" op="drecip" precision="drecip standard"/>
+            <ENTRY impl="all dsqrt" latency="-1 dsqrt" op="dsqrt" precision="dsqrt standard"/>
+            <ENTRY impl="all hadd" latency="-1 hadd" op="hadd" precision="hadd standard"/>
+            <ENTRY impl="all hsub" latency="-1 hsub" op="hsub" precision="hsub standard"/>
+            <ENTRY impl="all hdiv" latency="-1 hdiv" op="hdiv" precision="hdiv standard"/>
+            <ENTRY impl="all hmul" latency="-1 hmul" op="hmul" precision="hmul standard"/>
+            <ENTRY impl="all hsqrt" latency="-1 hsqrt" op="hsqrt" precision="hsqrt standard"/>
+            <ENTRY impl="all facc" latency="-1 facc" op="facc" precision="facc standard"/>
+            <ENTRY impl="all fmacc" latency="-1 fmacc" op="fmacc" precision="fmacc standard"/>
+            <ENTRY impl="all fmadd" latency="-1 fmadd" op="fmadd" precision="fmadd standard"/>
+        </config_op>
+        <config_storage>
+            <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
+        </config_storage>
+        <config_export output="C:/Xilinx/Decoder/Decoder/Size32" vivado_clock="11" vivado_max_timing_paths="11" vivado_phys_opt="all"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="In_EncodeStream" index="0" direction="in" srcType="ap_uint&lt;24&gt;" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="In_EncodeStream" name="In_EncodeStream" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="Outdecode" index="1" direction="inout" srcType="ap_uint&lt;8&gt;&amp;" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="Outdecode_i" name="Outdecode_i" usage="data" direction="in"/>
+                <hwRef type="port" interface="Outdecode_o" name="Outdecode_o" usage="data" direction="out"/>
+                <hwRef type="port" interface="Outdecode_o_ap_vld" name="Outdecode_o_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="In_EncodeStream" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="24">
+            <portMaps>
+                <portMap portMapName="In_EncodeStream">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>In_EncodeStream</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="In_EncodeStream"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Outdecode_i" type="data" busTypeName="data" protocol="ap_ovld" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="Outdecode_i">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Outdecode_i</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Outdecode"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Outdecode_o" type="data" busTypeName="data" protocol="ap_ovld" mode="master" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="Outdecode_o">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Outdecode_o</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Outdecode"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="REGISTER">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="In_EncodeStream">ap_none, 24, , </column>
+                    <column name="Outdecode_i">ap_none, 8, , </column>
+                    <column name="Outdecode_o">ap_none, 8, , </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst">reset, ap_rst, </column>
+                    <column name="ap_ctrl">ap_ctrl_none, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="In_EncodeStream">in, ap_uint&lt;24&gt;</column>
+                    <column name="Outdecode">inout, ap_uint&lt;8&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="In_EncodeStream">In_EncodeStream, port, , </column>
+                    <column name="Outdecode">Outdecode_i, port, , </column>
+                    <column name="Outdecode">Outdecode_o, port, , </column>
+                    <column name="Outdecode">Outdecode_o_ap_vld, port, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="array_partition" location="Decoder/DataTypeTrial/directives.tcl:8" status="valid" parentFunction="trellisbuilder" variable="choice" isDirective="1" options="variable=choice complete dim=2"/>
+        <Pragma type="array_partition" location="Decoder/DataTypeTrial/directives.tcl:9" status="valid" parentFunction="trellisbuilder" variable="ppMT" isDirective="1" options="variable=ppMT complete dim=1"/>
+        <Pragma type="array_partition" location="Decoder/DataTypeTrial/directives.tcl:12" status="valid" parentFunction="trellisbuilder" variable="prevState" isDirective="1" options="variable=prevState block factor=16 dim=2"/>
+        <Pragma type="interface" location="Decoder/DataTypeTrial/directives.tcl:6" status="valid" parentFunction="trellisbuilder" variable="return" isDirective="1" options="ap_ctrl_none port=return"/>
+        <Pragma type="unroll" location="Decoder/DataTypeTrial/directives.tcl:14" status="valid" parentFunction="trellisbuilder" variable="" isDirective="1" options=""/>
+    </PragmaReport>
+</profile>
+
