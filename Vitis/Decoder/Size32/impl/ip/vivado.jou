@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jun 27 15:21:04 2022
+# Process ID: 7860
+# Current directory: C:/Xilinx/Decoder/Decoder/Size32/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: C:/Xilinx/Decoder/Decoder/Size32/impl/ip/vivado.log
+# Journal file: C:/Xilinx/Decoder/Decoder/Size32/impl/ip\vivado.jou
+# Running On: DESKTOP-O8CIAUJ, OS: Windows, CPU Frequency: 2893 MHz, CPU Physical cores: 1, Host memory: 8549 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
