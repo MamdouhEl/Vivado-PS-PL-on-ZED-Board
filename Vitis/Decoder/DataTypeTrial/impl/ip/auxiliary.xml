@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="TrellisBuilder" xd:componentRef="TrellisBuilder" xd:initiationInterval="21" xd:clockPeriod="6.36" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="In_EncodeStream" xd:originalName="In_EncodeStream" xd:direction="in" xd:interfaceRef="In_EncodeStream" xd:busTypeRef="register" xd:dataWidth="24"/>
+  <xd:arg xd:name="*(Outdecode_i)" xd:originalName="Outdecode" xd:direction="in" xd:interfaceRef="Outdecode_i" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(Outdecode_o)" xd:originalName="Outdecode" xd:direction="out" xd:interfaceRef="Outdecode_o" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="8"/>
+  <xd:latencyEstimates xd:best-case="20" xd:worst-case="20" xd:average-case="20"/>
+  <xd:resourceEstimates xd:LUT="3989" xd:FF="233" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>
