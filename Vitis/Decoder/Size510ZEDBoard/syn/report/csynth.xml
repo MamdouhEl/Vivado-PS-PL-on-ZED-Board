@@ -1,0 +1,654 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z020-clg484-1</Part>
+        <TopModelName>TrellisBuilder</TopModelName>
+        <TargetClockPeriod>6.36</TargetClockPeriod>
+        <ClockUncertainty>1.72</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>5.473</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>876</Best-caseLatency>
+            <Average-caseLatency>876</Average-caseLatency>
+            <Worst-caseLatency>876</Worst-caseLatency>
+            <Best-caseRealTimeLatency>5.571 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>5.571 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>5.571 us</Worst-caseRealTimeLatency>
+            <Interval-min>877</Interval-min>
+            <Interval-max>877</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <FF>13678</FF>
+            <LUT>27514</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>280</BRAM_18K>
+            <DSP>220</DSP>
+            <FF>106400</FF>
+            <LUT>53200</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>TrellisBuilder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>TrellisBuilder</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>In_EncodeStream</name>
+            <Object>In_EncodeStream</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>510</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Outdecode_i</name>
+            <Object>Outdecode</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_ovld</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>170</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Outdecode_o</name>
+            <Object>Outdecode</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_ovld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>170</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>Outdecode_o_ap_vld</name>
+            <Object>Outdecode</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_ovld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>TrellisBuilder</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_TrellisBuilder_Pipeline_TrellisLoop_fu_1006</InstName>
+                    <ModuleName>TrellisBuilder_Pipeline_TrellisLoop</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>1006</ID>
+                    <BindInstances>add_ln45_fu_4470_p2 sub_ln43_fu_4499_p2 count000_V_1_fu_4587_p2 add_ln45_1_fu_4534_p2 count000_V_3_fu_4624_p2 add_ln47_fu_4529_p2 count000_V_5_fu_4756_p2 count001_V_1_fu_4774_p2 count002_V_1_fu_4630_p2 count002_V_3_fu_4793_p2 count002_V_5_fu_4804_p2 count010_V_1_fu_4835_p2 count011_V_1_fu_4643_p2 count011_V_3_fu_4656_p2 count011_V_5_fu_4859_p2 count012_V_1_fu_4662_p2 count012_V_3_fu_4872_p2 count013_V_3_fu_4896_p2 count100_V_1_fu_4902_p2 count101_V_1_fu_4675_p2 count101_V_3_fu_4688_p2 count101_V_5_fu_4926_p2 count102_V_1_fu_4694_p2 count102_V_3_fu_4939_p2 count103_V_3_fu_4973_p2 count110_V_1_fu_4707_p2 count110_V_3_fu_4720_p2 count110_V_5_fu_4984_p2 count111_V_1_fu_4997_p2 count112_V_1_fu_4726_p2 count112_V_3_fu_5016_p2 count112_V_5_fu_5027_p2 mul_8ns_10ns_17_1_1_U2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_TrellisBuilder_Pipeline_VITIS_LOOP_1453_1_fu_1332</InstName>
+                    <ModuleName>TrellisBuilder_Pipeline_VITIS_LOOP_1453_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>1332</ID>
+                    <BindInstances>add_ln1492_fu_2698_p2 sub_ln1456_fu_2704_p2 mul_8ns_10ns_17_1_1_U166 k_1_fu_4134_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>prevState_V_U prevState_V_1_U prevState_V_2_U prevState_V_3_U prevState_V_4_U prevState_V_5_U prevState_V_6_U prevState_V_7_U prevState_V_8_U prevState_V_9_U prevState_V_10_U prevState_V_11_U prevState_V_12_U prevState_V_13_U prevState_V_14_U prevState_V_15_U prevState_V_16_U prevState_V_17_U prevState_V_18_U prevState_V_19_U prevState_V_20_U prevState_V_21_U prevState_V_22_U prevState_V_23_U prevState_V_24_U prevState_V_25_U prevState_V_26_U prevState_V_27_U prevState_V_28_U prevState_V_29_U prevState_V_30_U prevState_V_31_U choice_U choice_1_U choice_2_U choice_3_U choice_4_U choice_5_U choice_6_U choice_7_U choice_8_U choice_9_U choice_10_U choice_11_U choice_12_U choice_13_U choice_14_U choice_15_U choice_16_U choice_17_U choice_18_U choice_19_U choice_20_U choice_21_U choice_22_U choice_23_U choice_24_U choice_25_U choice_26_U choice_27_U choice_28_U choice_29_U choice_30_U choice_31_U choice_32_U choice_33_U choice_34_U choice_35_U choice_36_U choice_37_U choice_38_U choice_39_U choice_40_U choice_41_U choice_42_U choice_43_U choice_44_U choice_45_U choice_46_U choice_47_U choice_48_U choice_49_U choice_50_U choice_51_U choice_52_U choice_53_U choice_54_U choice_55_U choice_56_U choice_57_U choice_58_U choice_59_U choice_60_U choice_61_U choice_62_U choice_63_U choice_64_U choice_65_U choice_66_U choice_67_U choice_68_U choice_69_U choice_70_U choice_71_U choice_72_U choice_73_U choice_74_U choice_75_U choice_76_U choice_77_U choice_78_U choice_79_U choice_80_U choice_81_U choice_82_U choice_83_U choice_84_U choice_85_U choice_86_U choice_87_U choice_88_U choice_89_U choice_90_U choice_91_U choice_92_U choice_93_U choice_94_U choice_95_U choice_96_U choice_97_U choice_98_U choice_99_U choice_100_U choice_101_U choice_102_U choice_103_U choice_104_U choice_105_U choice_106_U choice_107_U choice_108_U choice_109_U choice_110_U choice_111_U choice_112_U choice_113_U choice_114_U choice_115_U choice_116_U choice_117_U choice_118_U choice_119_U choice_120_U choice_121_U choice_122_U choice_123_U choice_124_U choice_125_U choice_126_U choice_127_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>TrellisBuilder_Pipeline_TrellisLoop</Name>
+            <Loops>
+                <TrellisLoop/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>6.36</TargetClockPeriod>
+                    <ClockUncertainty>1.72</ClockUncertainty>
+                    <EstimatedClockPeriod>5.473</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>354</Best-caseLatency>
+                    <Average-caseLatency>354</Average-caseLatency>
+                    <Worst-caseLatency>354</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>2.251 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>2.251 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>2.251 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>354</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <TrellisLoop>
+                        <Name>TrellisLoop</Name>
+                        <TripCount>170</TripCount>
+                        <Latency>352</Latency>
+                        <AbsoluteTimeLatency>2.239 us</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>15</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </TrellisLoop>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>12109</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>11</UTIL_FF>
+                    <LUT>18439</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>34</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_fu_4470_p2" SOURCE="Decoder.cpp:45" URAM="0" VARIABLE="add_ln45"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln43_fu_4499_p2" SOURCE="Decoder.cpp:43" URAM="0" VARIABLE="sub_ln43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count000_V_1_fu_4587_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count000_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_1_fu_4534_p2" SOURCE="Decoder.cpp:45" URAM="0" VARIABLE="add_ln45_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count000_V_3_fu_4624_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count000_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln47_fu_4529_p2" SOURCE="Decoder.cpp:47" URAM="0" VARIABLE="add_ln47"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count000_V_5_fu_4756_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count000_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count001_V_1_fu_4774_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count001_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count002_V_1_fu_4630_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count002_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count002_V_3_fu_4793_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count002_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count002_V_5_fu_4804_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count002_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count010_V_1_fu_4835_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count010_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count011_V_1_fu_4643_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count011_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count011_V_3_fu_4656_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count011_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count011_V_5_fu_4859_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count011_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count012_V_1_fu_4662_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count012_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count012_V_3_fu_4872_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count012_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count013_V_3_fu_4896_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count013_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count100_V_1_fu_4902_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count100_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count101_V_1_fu_4675_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count101_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count101_V_3_fu_4688_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count101_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count101_V_5_fu_4926_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count101_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count102_V_1_fu_4694_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count102_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count102_V_3_fu_4939_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count102_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count103_V_3_fu_4973_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count103_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count110_V_1_fu_4707_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count110_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count110_V_3_fu_4720_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count110_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count110_V_5_fu_4984_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count110_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count111_V_1_fu_4997_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count111_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count112_V_1_fu_4726_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count112_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count112_V_3_fu_5016_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count112_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="TrellisLoop" OPTYPE="add" PRAGMA="" RTLNAME="count112_V_5_fu_5027_p2" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886" URAM="0" VARIABLE="count112_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="TrellisLoop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_10ns_17_1_1_U2" SOURCE="Decoder.cpp:251" URAM="0" VARIABLE="mul_ln251"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>TrellisBuilder_Pipeline_VITIS_LOOP_1453_1</Name>
+            <Loops>
+                <VITIS_LOOP_1453_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>6.36</TargetClockPeriod>
+                    <ClockUncertainty>1.72</ClockUncertainty>
+                    <EstimatedClockPeriod>4.520</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>515</Best-caseLatency>
+                    <Average-caseLatency>515</Average-caseLatency>
+                    <Worst-caseLatency>515</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>3.275 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>3.275 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>3.275 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>515</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_1453_1>
+                        <Name>VITIS_LOOP_1453_1</Name>
+                        <TripCount>166</TripCount>
+                        <Latency>513</Latency>
+                        <AbsoluteTimeLatency>3.263 us</AbsoluteTimeLatency>
+                        <PipelineII>3</PipelineII>
+                        <PipelineDepth>19</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_1453_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>700</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>2030</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>3</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_1453_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln1492_fu_2698_p2" SOURCE="Decoder.cpp:1492" URAM="0" VARIABLE="add_ln1492"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_1453_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1456_fu_2704_p2" SOURCE="Decoder.cpp:1456" URAM="0" VARIABLE="sub_ln1456"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_1453_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_8ns_10ns_17_1_1_U166" SOURCE="E:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1065" URAM="0" VARIABLE="mul_ln1065"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_1453_1" OPTYPE="add" PRAGMA="" RTLNAME="k_1_fu_4134_p2" SOURCE="Decoder.cpp:1453" URAM="0" VARIABLE="k_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>TrellisBuilder</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>6.36</TargetClockPeriod>
+                    <ClockUncertainty>1.72</ClockUncertainty>
+                    <EstimatedClockPeriod>5.473</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>876</Best-caseLatency>
+                    <Average-caseLatency>876</Average-caseLatency>
+                    <Worst-caseLatency>876</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.571 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.571 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.571 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>877</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>13678</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>12</UTIL_FF>
+                    <LUT>27514</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>51</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_1_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_2_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_3_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_3"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_4_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_4"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_5_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_5"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_6_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_6"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_7_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_7"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_8_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_8"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_9_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_9"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_10_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_10"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_11_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_11"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_12_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_12"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_13_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_13"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_14_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_14"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_15_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_15"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_16_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_16"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_17_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_17"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_18_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_18"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_19_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_19"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_20_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_20"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_21_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_21"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_22_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_22"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_23_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_23"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_24_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_24"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_25_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_25"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_26_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_26"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_27_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_27"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_28_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_28"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_29_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_29"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_30_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_30"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="prevState_V_31_U" SOURCE="Decoder.cpp:11" URAM="0" VARIABLE="prevState_V_31"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_1_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_2_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_3_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_3"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_4_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_4"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_5_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_5"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_6_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_6"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_7_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_7"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_8_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_8"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_9_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_9"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_10_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_10"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_11_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_11"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_12_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_12"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_13_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_13"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_14_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_14"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_15_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_15"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_16_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_16"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_17_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_17"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_18_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_18"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_19_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_19"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_20_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_20"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_21_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_21"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_22_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_22"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_23_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_23"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_24_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_24"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_25_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_25"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_26_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_26"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_27_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_27"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_28_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_28"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_29_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_29"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_30_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_30"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_31_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_31"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_32_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_32"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_33_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_33"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_34_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_34"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_35_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_35"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_36_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_36"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_37_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_37"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_38_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_38"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_39_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_39"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_40_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_40"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_41_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_41"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_42_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_42"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_43_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_43"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_44_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_44"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_45_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_45"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_46_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_46"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_47_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_47"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_48_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_48"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_49_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_49"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_50_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_50"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_51_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_51"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_52_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_52"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_53_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_53"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_54_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_54"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_55_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_55"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_56_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_56"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_57_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_57"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_58_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_58"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_59_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_59"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_60_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_60"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_61_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_61"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_62_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_62"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_63_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_63"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_64_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_64"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_65_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_65"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_66_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_66"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_67_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_67"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_68_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_68"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_69_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_69"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_70_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_70"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_71_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_71"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_72_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_72"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_73_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_73"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_74_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_74"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_75_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_75"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_76_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_76"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_77_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_77"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_78_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_78"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_79_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_79"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_80_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_80"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_81_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_81"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_82_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_82"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_83_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_83"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_84_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_84"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_85_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_85"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_86_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_86"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_87_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_87"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_88_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_88"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_89_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_89"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_90_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_90"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_91_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_91"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_92_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_92"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_93_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_93"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_94_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_94"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_95_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_95"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_96_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_96"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_97_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_97"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_98_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_98"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_99_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_99"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_100_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_100"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_101_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_101"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_102_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_102"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_103_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_103"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_104_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_104"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_105_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_105"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_106_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_106"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_107_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_107"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_108_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_108"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_109_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_109"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_110_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_110"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_111_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_111"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_112_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_112"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_113_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_113"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_114_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_114"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_115_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_115"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_116_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_116"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_117_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_117"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_118_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_118"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_119_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_119"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_120_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_120"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_121_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_121"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_122_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_122"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_123_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_123"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_124_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_124"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_125_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_125"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_126_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_126"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="choice_127_U" SOURCE="Decoder.cpp:13" URAM="0" VARIABLE="choice_127"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_op>
+            <ENTRY impl="all mul" latency="-1 mul" op="mul" precision="mul standard"/>
+            <ENTRY impl="all add" latency="-1 add" op="add" precision="add standard"/>
+            <ENTRY impl="all sub" latency="-1 sub" op="sub" precision="sub standard"/>
+            <ENTRY impl="all fadd" latency="-1 fadd" op="fadd" precision="fadd standard"/>
+            <ENTRY impl="all fsub" latency="-1 fsub" op="fsub" precision="fsub standard"/>
+            <ENTRY impl="all fdiv" latency="-1 fdiv" op="fdiv" precision="fdiv standard"/>
+            <ENTRY impl="all fexp" latency="-1 fexp" op="fexp" precision="fexp standard"/>
+            <ENTRY impl="all flog" latency="-1 flog" op="flog" precision="flog standard"/>
+            <ENTRY impl="all fmul" latency="-1 fmul" op="fmul" precision="fmul standard"/>
+            <ENTRY impl="all frsqrt" latency="-1 frsqrt" op="frsqrt" precision="frsqrt standard"/>
+            <ENTRY impl="all frecip" latency="-1 frecip" op="frecip" precision="frecip standard"/>
+            <ENTRY impl="all fsqrt" latency="-1 fsqrt" op="fsqrt" precision="fsqrt standard"/>
+            <ENTRY impl="all dadd" latency="-1 dadd" op="dadd" precision="dadd standard"/>
+            <ENTRY impl="all dsub" latency="-1 dsub" op="dsub" precision="dsub standard"/>
+            <ENTRY impl="all ddiv" latency="-1 ddiv" op="ddiv" precision="ddiv standard"/>
+            <ENTRY impl="all dexp" latency="-1 dexp" op="dexp" precision="dexp standard"/>
+            <ENTRY impl="all dlog" latency="-1 dlog" op="dlog" precision="dlog standard"/>
+            <ENTRY impl="all dmul" latency="-1 dmul" op="dmul" precision="dmul standard"/>
+            <ENTRY impl="all drsqrt" latency="-1 drsqrt" op="drsqrt" precision="drsqrt standard"/>
+            <ENTRY impl="all drecip" latency="-1 drecip" op="drecip" precision="drecip standard"/>
+            <ENTRY impl="all dsqrt" latency="-1 dsqrt" op="dsqrt" precision="dsqrt standard"/>
+            <ENTRY impl="all hadd" latency="-1 hadd" op="hadd" precision="hadd standard"/>
+            <ENTRY impl="all hsub" latency="-1 hsub" op="hsub" precision="hsub standard"/>
+            <ENTRY impl="all hdiv" latency="-1 hdiv" op="hdiv" precision="hdiv standard"/>
+            <ENTRY impl="all hmul" latency="-1 hmul" op="hmul" precision="hmul standard"/>
+            <ENTRY impl="all hsqrt" latency="-1 hsqrt" op="hsqrt" precision="hsqrt standard"/>
+            <ENTRY impl="all facc" latency="-1 facc" op="facc" precision="facc standard"/>
+            <ENTRY impl="all fmacc" latency="-1 fmacc" op="fmacc" precision="fmacc standard"/>
+            <ENTRY impl="all fmadd" latency="-1 fmadd" op="fmadd" precision="fmadd standard"/>
+        </config_op>
+        <config_storage>
+            <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
+        </config_storage>
+        <config_export output="C:/Xilinx/Decoder" vivado_clock="10"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="In_EncodeStream" index="0" direction="in" srcType="ap_uint&lt;510&gt;" srcSize="512">
+            <hwRefs>
+                <hwRef type="port" interface="In_EncodeStream" name="In_EncodeStream" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="Outdecode" index="1" direction="inout" srcType="ap_uint&lt;170&gt;&amp;" srcSize="256">
+            <hwRefs>
+                <hwRef type="port" interface="Outdecode_i" name="Outdecode_i" usage="data" direction="in"/>
+                <hwRef type="port" interface="Outdecode_o" name="Outdecode_o" usage="data" direction="out"/>
+                <hwRef type="port" interface="Outdecode_o_ap_vld" name="Outdecode_o_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="In_EncodeStream" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="510">
+            <portMaps>
+                <portMap portMapName="In_EncodeStream">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>In_EncodeStream</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="In_EncodeStream"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Outdecode_i" type="data" busTypeName="data" protocol="ap_ovld" mode="slave" dataWidth="170">
+            <portMaps>
+                <portMap portMapName="Outdecode_i">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Outdecode_i</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Outdecode"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="Outdecode_o" type="data" busTypeName="data" protocol="ap_ovld" mode="master" dataWidth="170">
+            <portMaps>
+                <portMap portMapName="Outdecode_o">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>Outdecode_o</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="Outdecode"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="REGISTER">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="In_EncodeStream">ap_none, 510, , </column>
+                    <column name="Outdecode_i">ap_none, 170, , </column>
+                    <column name="Outdecode_o">ap_none, 170, , </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst">reset, ap_rst, </column>
+                    <column name="ap_ctrl">ap_ctrl_none, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="In_EncodeStream">in, ap_uint&lt;510&gt;</column>
+                    <column name="Outdecode">inout, ap_uint&lt;170&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="In_EncodeStream">In_EncodeStream, port, , </column>
+                    <column name="Outdecode">Outdecode_i, port, , </column>
+                    <column name="Outdecode">Outdecode_o, port, , </column>
+                    <column name="Outdecode">Outdecode_o_ap_vld, port, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="array_partition" location="Decoder/Size510ZEDBoard/directives.tcl:8" status="valid" parentFunction="trellisbuilder" variable="choice" isDirective="1" options="variable=choice block factor=16 dim=2"/>
+        <Pragma type="array_partition" location="Decoder/Size510ZEDBoard/directives.tcl:9" status="valid" parentFunction="trellisbuilder" variable="ppMT" isDirective="1" options="variable=ppMT complete dim=1"/>
+        <Pragma type="array_partition" location="Decoder/Size510ZEDBoard/directives.tcl:12" status="valid" parentFunction="trellisbuilder" variable="prevState" isDirective="1" options="variable=prevState block factor=16 dim=2"/>
+        <Pragma type="interface" location="Decoder/Size510ZEDBoard/directives.tcl:6" status="valid" parentFunction="trellisbuilder" variable="return" isDirective="1" options="ap_ctrl_none port=return"/>
+        <Pragma type="unroll" location="Decoder/Size510ZEDBoard/directives.tcl:14" status="valid" parentFunction="trellisbuilder" variable="" isDirective="1" options=""/>
+    </PragmaReport>
+</profile>
+

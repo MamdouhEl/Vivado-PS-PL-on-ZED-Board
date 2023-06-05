@@ -1,0 +1,314 @@
+
+
+================================================================
+== Synthesis Summary Report of 'TrellisBuilder'
+================================================================
++ General Information: 
+    * Date:           Wed Oct  5 07:10:32 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        Decoder
+    * Solution:       Size510ZEDBoard (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+----+-------------+-------------+-----+
+    |                    Modules                   |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |      |    |             |             |     |
+    |                    & Loops                   |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM | DSP|      FF     |     LUT     | URAM|
+    +----------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+----+-------------+-------------+-----+
+    |+ TrellisBuilder                              |  Timing|  -0.83|      876|  5.571e+03|         -|      877|     -|        no|     -|   -|  13678 (12%)|  27514 (51%)|    -|
+    | + TrellisBuilder_Pipeline_TrellisLoop        |  Timing|  -0.83|      354|  2.251e+03|         -|      354|     -|        no|     -|   -|  12109 (11%)|  18439 (34%)|    -|
+    |  o TrellisLoop                               |      II|   4.64|      352|  2.239e+03|        15|        2|   170|       yes|     -|   -|            -|            -|    -|
+    | + TrellisBuilder_Pipeline_VITIS_LOOP_1453_1  |       -|   0.12|      515|  3.275e+03|         -|      515|     -|        no|     -|   -|    700 (~0%)|    2030 (3%)|    -|
+    |  o VITIS_LOOP_1453_1                         |      II|   4.64|      513|  3.263e+03|        19|        3|   166|       yes|     -|   -|            -|            -|    -|
+    +----------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+----+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* REGISTER
++-----------------+---------+----------+
+| Interface       | Mode    | Bitwidth |
++-----------------+---------+----------+
+| In_EncodeStream | ap_none | 510      |
+| Outdecode_i     | ap_none | 170      |
+| Outdecode_o     | ap_none | 170      |
++-----------------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+--------+
+| Interface | Type         | Ports  |
++-----------+--------------+--------+
+| ap_clk    | clock        | ap_clk |
+| ap_rst    | reset        | ap_rst |
+| ap_ctrl   | ap_ctrl_none |        |
++-----------+--------------+--------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------------+-----------+---------------+
+| Argument        | Direction | Datatype      |
++-----------------+-----------+---------------+
+| In_EncodeStream | in        | ap_uint<510>  |
+| Outdecode       | inout     | ap_uint<170>& |
++-----------------+-----------+---------------+
+
+* SW-to-HW Mapping
++-----------------+--------------------+---------+
+| Argument        | HW Interface       | HW Type |
++-----------------+--------------------+---------+
+| In_EncodeStream | In_EncodeStream    | port    |
+| Outdecode       | Outdecode_i        | port    |
+| Outdecode       | Outdecode_o        | port    |
+| Outdecode       | Outdecode_o_ap_vld | port    |
++-----------------+--------------------+---------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| Name                                         | DSP | Pragma | Variable     | Op  | Impl   | Latency |
++----------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| + TrellisBuilder                             | 0   |        |              |     |        |         |
+|  + TrellisBuilder_Pipeline_TrellisLoop       | 0   |        |              |     |        |         |
+|    add_ln45_fu_4470_p2                       | -   |        | add_ln45     | add | fabric | 0       |
+|    sub_ln43_fu_4499_p2                       | -   |        | sub_ln43     | sub | fabric | 0       |
+|    count000_V_1_fu_4587_p2                   | -   |        | count000_V_1 | add | fabric | 0       |
+|    add_ln45_1_fu_4534_p2                     | -   |        | add_ln45_1   | add | fabric | 0       |
+|    count000_V_3_fu_4624_p2                   | -   |        | count000_V_3 | add | fabric | 0       |
+|    add_ln47_fu_4529_p2                       | -   |        | add_ln47     | add | fabric | 0       |
+|    count000_V_5_fu_4756_p2                   | -   |        | count000_V_5 | add | fabric | 0       |
+|    count001_V_1_fu_4774_p2                   | -   |        | count001_V_1 | add | fabric | 0       |
+|    count002_V_1_fu_4630_p2                   | -   |        | count002_V_1 | add | fabric | 0       |
+|    count002_V_3_fu_4793_p2                   | -   |        | count002_V_3 | add | fabric | 0       |
+|    count002_V_5_fu_4804_p2                   | -   |        | count002_V_5 | add | fabric | 0       |
+|    count010_V_1_fu_4835_p2                   | -   |        | count010_V_1 | add | fabric | 0       |
+|    count011_V_1_fu_4643_p2                   | -   |        | count011_V_1 | add | fabric | 0       |
+|    count011_V_3_fu_4656_p2                   | -   |        | count011_V_3 | add | fabric | 0       |
+|    count011_V_5_fu_4859_p2                   | -   |        | count011_V_5 | add | fabric | 0       |
+|    count012_V_1_fu_4662_p2                   | -   |        | count012_V_1 | add | fabric | 0       |
+|    count012_V_3_fu_4872_p2                   | -   |        | count012_V_3 | add | fabric | 0       |
+|    count013_V_3_fu_4896_p2                   | -   |        | count013_V_3 | add | fabric | 0       |
+|    count100_V_1_fu_4902_p2                   | -   |        | count100_V_1 | add | fabric | 0       |
+|    count101_V_1_fu_4675_p2                   | -   |        | count101_V_1 | add | fabric | 0       |
+|    count101_V_3_fu_4688_p2                   | -   |        | count101_V_3 | add | fabric | 0       |
+|    count101_V_5_fu_4926_p2                   | -   |        | count101_V_5 | add | fabric | 0       |
+|    count102_V_1_fu_4694_p2                   | -   |        | count102_V_1 | add | fabric | 0       |
+|    count102_V_3_fu_4939_p2                   | -   |        | count102_V_3 | add | fabric | 0       |
+|    count103_V_3_fu_4973_p2                   | -   |        | count103_V_3 | add | fabric | 0       |
+|    count110_V_1_fu_4707_p2                   | -   |        | count110_V_1 | add | fabric | 0       |
+|    count110_V_3_fu_4720_p2                   | -   |        | count110_V_3 | add | fabric | 0       |
+|    count110_V_5_fu_4984_p2                   | -   |        | count110_V_5 | add | fabric | 0       |
+|    count111_V_1_fu_4997_p2                   | -   |        | count111_V_1 | add | fabric | 0       |
+|    count112_V_1_fu_4726_p2                   | -   |        | count112_V_1 | add | fabric | 0       |
+|    count112_V_3_fu_5016_p2                   | -   |        | count112_V_3 | add | fabric | 0       |
+|    count112_V_5_fu_5027_p2                   | -   |        | count112_V_5 | add | fabric | 0       |
+|    mul_8ns_10ns_17_1_1_U2                    | -   |        | mul_ln251    | mul | auto   | 0       |
+|  + TrellisBuilder_Pipeline_VITIS_LOOP_1453_1 | 0   |        |              |     |        |         |
+|    add_ln1492_fu_2698_p2                     | -   |        | add_ln1492   | add | fabric | 0       |
+|    sub_ln1456_fu_2704_p2                     | -   |        | sub_ln1456   | sub | fabric | 0       |
+|    mul_8ns_10ns_17_1_1_U166                  | -   |        | mul_ln1065   | mul | auto   | 0       |
+|    k_1_fu_4134_p2                            | -   |        | k_1          | add | fabric | 0       |
++----------------------------------------------+-----+--------+--------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------+------+------+--------+----------------+---------+------+---------+
+| Name               | BRAM | URAM | Pragma | Variable       | Storage | Impl | Latency |
++--------------------+------+------+--------+----------------+---------+------+---------+
+| + TrellisBuilder   | 0    | 0    |        |                |         |      |         |
+|   prevState_V_U    | -    | -    |        | prevState_V    | ram_t2p | auto | 1       |
+|   prevState_V_1_U  | -    | -    |        | prevState_V_1  | ram_t2p | auto | 1       |
+|   prevState_V_2_U  | -    | -    |        | prevState_V_2  | ram_t2p | auto | 1       |
+|   prevState_V_3_U  | -    | -    |        | prevState_V_3  | ram_t2p | auto | 1       |
+|   prevState_V_4_U  | -    | -    |        | prevState_V_4  | ram_t2p | auto | 1       |
+|   prevState_V_5_U  | -    | -    |        | prevState_V_5  | ram_t2p | auto | 1       |
+|   prevState_V_6_U  | -    | -    |        | prevState_V_6  | ram_t2p | auto | 1       |
+|   prevState_V_7_U  | -    | -    |        | prevState_V_7  | ram_t2p | auto | 1       |
+|   prevState_V_8_U  | -    | -    |        | prevState_V_8  | ram_t2p | auto | 1       |
+|   prevState_V_9_U  | -    | -    |        | prevState_V_9  | ram_t2p | auto | 1       |
+|   prevState_V_10_U | -    | -    |        | prevState_V_10 | ram_t2p | auto | 1       |
+|   prevState_V_11_U | -    | -    |        | prevState_V_11 | ram_t2p | auto | 1       |
+|   prevState_V_12_U | -    | -    |        | prevState_V_12 | ram_t2p | auto | 1       |
+|   prevState_V_13_U | -    | -    |        | prevState_V_13 | ram_t2p | auto | 1       |
+|   prevState_V_14_U | -    | -    |        | prevState_V_14 | ram_t2p | auto | 1       |
+|   prevState_V_15_U | -    | -    |        | prevState_V_15 | ram_t2p | auto | 1       |
+|   prevState_V_16_U | -    | -    |        | prevState_V_16 | ram_t2p | auto | 1       |
+|   prevState_V_17_U | -    | -    |        | prevState_V_17 | ram_t2p | auto | 1       |
+|   prevState_V_18_U | -    | -    |        | prevState_V_18 | ram_t2p | auto | 1       |
+|   prevState_V_19_U | -    | -    |        | prevState_V_19 | ram_t2p | auto | 1       |
+|   prevState_V_20_U | -    | -    |        | prevState_V_20 | ram_t2p | auto | 1       |
+|   prevState_V_21_U | -    | -    |        | prevState_V_21 | ram_t2p | auto | 1       |
+|   prevState_V_22_U | -    | -    |        | prevState_V_22 | ram_t2p | auto | 1       |
+|   prevState_V_23_U | -    | -    |        | prevState_V_23 | ram_t2p | auto | 1       |
+|   prevState_V_24_U | -    | -    |        | prevState_V_24 | ram_t2p | auto | 1       |
+|   prevState_V_25_U | -    | -    |        | prevState_V_25 | ram_t2p | auto | 1       |
+|   prevState_V_26_U | -    | -    |        | prevState_V_26 | ram_t2p | auto | 1       |
+|   prevState_V_27_U | -    | -    |        | prevState_V_27 | ram_t2p | auto | 1       |
+|   prevState_V_28_U | -    | -    |        | prevState_V_28 | ram_t2p | auto | 1       |
+|   prevState_V_29_U | -    | -    |        | prevState_V_29 | ram_t2p | auto | 1       |
+|   prevState_V_30_U | -    | -    |        | prevState_V_30 | ram_t2p | auto | 1       |
+|   prevState_V_31_U | -    | -    |        | prevState_V_31 | ram_t2p | auto | 1       |
+|   choice_U         | -    | -    |        | choice         | ram_1p  | auto | 1       |
+|   choice_1_U       | -    | -    |        | choice_1       | ram_1p  | auto | 1       |
+|   choice_2_U       | -    | -    |        | choice_2       | ram_1p  | auto | 1       |
+|   choice_3_U       | -    | -    |        | choice_3       | ram_1p  | auto | 1       |
+|   choice_4_U       | -    | -    |        | choice_4       | ram_1p  | auto | 1       |
+|   choice_5_U       | -    | -    |        | choice_5       | ram_1p  | auto | 1       |
+|   choice_6_U       | -    | -    |        | choice_6       | ram_1p  | auto | 1       |
+|   choice_7_U       | -    | -    |        | choice_7       | ram_1p  | auto | 1       |
+|   choice_8_U       | -    | -    |        | choice_8       | ram_1p  | auto | 1       |
+|   choice_9_U       | -    | -    |        | choice_9       | ram_1p  | auto | 1       |
+|   choice_10_U      | -    | -    |        | choice_10      | ram_1p  | auto | 1       |
+|   choice_11_U      | -    | -    |        | choice_11      | ram_1p  | auto | 1       |
+|   choice_12_U      | -    | -    |        | choice_12      | ram_1p  | auto | 1       |
+|   choice_13_U      | -    | -    |        | choice_13      | ram_1p  | auto | 1       |
+|   choice_14_U      | -    | -    |        | choice_14      | ram_1p  | auto | 1       |
+|   choice_15_U      | -    | -    |        | choice_15      | ram_1p  | auto | 1       |
+|   choice_16_U      | -    | -    |        | choice_16      | ram_1p  | auto | 1       |
+|   choice_17_U      | -    | -    |        | choice_17      | ram_1p  | auto | 1       |
+|   choice_18_U      | -    | -    |        | choice_18      | ram_1p  | auto | 1       |
+|   choice_19_U      | -    | -    |        | choice_19      | ram_1p  | auto | 1       |
+|   choice_20_U      | -    | -    |        | choice_20      | ram_1p  | auto | 1       |
+|   choice_21_U      | -    | -    |        | choice_21      | ram_1p  | auto | 1       |
+|   choice_22_U      | -    | -    |        | choice_22      | ram_1p  | auto | 1       |
+|   choice_23_U      | -    | -    |        | choice_23      | ram_1p  | auto | 1       |
+|   choice_24_U      | -    | -    |        | choice_24      | ram_1p  | auto | 1       |
+|   choice_25_U      | -    | -    |        | choice_25      | ram_1p  | auto | 1       |
+|   choice_26_U      | -    | -    |        | choice_26      | ram_1p  | auto | 1       |
+|   choice_27_U      | -    | -    |        | choice_27      | ram_1p  | auto | 1       |
+|   choice_28_U      | -    | -    |        | choice_28      | ram_1p  | auto | 1       |
+|   choice_29_U      | -    | -    |        | choice_29      | ram_1p  | auto | 1       |
+|   choice_30_U      | -    | -    |        | choice_30      | ram_1p  | auto | 1       |
+|   choice_31_U      | -    | -    |        | choice_31      | ram_1p  | auto | 1       |
+|   choice_32_U      | -    | -    |        | choice_32      | ram_1p  | auto | 1       |
+|   choice_33_U      | -    | -    |        | choice_33      | ram_1p  | auto | 1       |
+|   choice_34_U      | -    | -    |        | choice_34      | ram_1p  | auto | 1       |
+|   choice_35_U      | -    | -    |        | choice_35      | ram_1p  | auto | 1       |
+|   choice_36_U      | -    | -    |        | choice_36      | ram_1p  | auto | 1       |
+|   choice_37_U      | -    | -    |        | choice_37      | ram_1p  | auto | 1       |
+|   choice_38_U      | -    | -    |        | choice_38      | ram_1p  | auto | 1       |
+|   choice_39_U      | -    | -    |        | choice_39      | ram_1p  | auto | 1       |
+|   choice_40_U      | -    | -    |        | choice_40      | ram_1p  | auto | 1       |
+|   choice_41_U      | -    | -    |        | choice_41      | ram_1p  | auto | 1       |
+|   choice_42_U      | -    | -    |        | choice_42      | ram_1p  | auto | 1       |
+|   choice_43_U      | -    | -    |        | choice_43      | ram_1p  | auto | 1       |
+|   choice_44_U      | -    | -    |        | choice_44      | ram_1p  | auto | 1       |
+|   choice_45_U      | -    | -    |        | choice_45      | ram_1p  | auto | 1       |
+|   choice_46_U      | -    | -    |        | choice_46      | ram_1p  | auto | 1       |
+|   choice_47_U      | -    | -    |        | choice_47      | ram_1p  | auto | 1       |
+|   choice_48_U      | -    | -    |        | choice_48      | ram_1p  | auto | 1       |
+|   choice_49_U      | -    | -    |        | choice_49      | ram_1p  | auto | 1       |
+|   choice_50_U      | -    | -    |        | choice_50      | ram_1p  | auto | 1       |
+|   choice_51_U      | -    | -    |        | choice_51      | ram_1p  | auto | 1       |
+|   choice_52_U      | -    | -    |        | choice_52      | ram_1p  | auto | 1       |
+|   choice_53_U      | -    | -    |        | choice_53      | ram_1p  | auto | 1       |
+|   choice_54_U      | -    | -    |        | choice_54      | ram_1p  | auto | 1       |
+|   choice_55_U      | -    | -    |        | choice_55      | ram_1p  | auto | 1       |
+|   choice_56_U      | -    | -    |        | choice_56      | ram_1p  | auto | 1       |
+|   choice_57_U      | -    | -    |        | choice_57      | ram_1p  | auto | 1       |
+|   choice_58_U      | -    | -    |        | choice_58      | ram_1p  | auto | 1       |
+|   choice_59_U      | -    | -    |        | choice_59      | ram_1p  | auto | 1       |
+|   choice_60_U      | -    | -    |        | choice_60      | ram_1p  | auto | 1       |
+|   choice_61_U      | -    | -    |        | choice_61      | ram_1p  | auto | 1       |
+|   choice_62_U      | -    | -    |        | choice_62      | ram_1p  | auto | 1       |
+|   choice_63_U      | -    | -    |        | choice_63      | ram_1p  | auto | 1       |
+|   choice_64_U      | -    | -    |        | choice_64      | ram_1p  | auto | 1       |
+|   choice_65_U      | -    | -    |        | choice_65      | ram_1p  | auto | 1       |
+|   choice_66_U      | -    | -    |        | choice_66      | ram_1p  | auto | 1       |
+|   choice_67_U      | -    | -    |        | choice_67      | ram_1p  | auto | 1       |
+|   choice_68_U      | -    | -    |        | choice_68      | ram_1p  | auto | 1       |
+|   choice_69_U      | -    | -    |        | choice_69      | ram_1p  | auto | 1       |
+|   choice_70_U      | -    | -    |        | choice_70      | ram_1p  | auto | 1       |
+|   choice_71_U      | -    | -    |        | choice_71      | ram_1p  | auto | 1       |
+|   choice_72_U      | -    | -    |        | choice_72      | ram_1p  | auto | 1       |
+|   choice_73_U      | -    | -    |        | choice_73      | ram_1p  | auto | 1       |
+|   choice_74_U      | -    | -    |        | choice_74      | ram_1p  | auto | 1       |
+|   choice_75_U      | -    | -    |        | choice_75      | ram_1p  | auto | 1       |
+|   choice_76_U      | -    | -    |        | choice_76      | ram_1p  | auto | 1       |
+|   choice_77_U      | -    | -    |        | choice_77      | ram_1p  | auto | 1       |
+|   choice_78_U      | -    | -    |        | choice_78      | ram_1p  | auto | 1       |
+|   choice_79_U      | -    | -    |        | choice_79      | ram_1p  | auto | 1       |
+|   choice_80_U      | -    | -    |        | choice_80      | ram_1p  | auto | 1       |
+|   choice_81_U      | -    | -    |        | choice_81      | ram_1p  | auto | 1       |
+|   choice_82_U      | -    | -    |        | choice_82      | ram_1p  | auto | 1       |
+|   choice_83_U      | -    | -    |        | choice_83      | ram_1p  | auto | 1       |
+|   choice_84_U      | -    | -    |        | choice_84      | ram_1p  | auto | 1       |
+|   choice_85_U      | -    | -    |        | choice_85      | ram_1p  | auto | 1       |
+|   choice_86_U      | -    | -    |        | choice_86      | ram_1p  | auto | 1       |
+|   choice_87_U      | -    | -    |        | choice_87      | ram_1p  | auto | 1       |
+|   choice_88_U      | -    | -    |        | choice_88      | ram_1p  | auto | 1       |
+|   choice_89_U      | -    | -    |        | choice_89      | ram_1p  | auto | 1       |
+|   choice_90_U      | -    | -    |        | choice_90      | ram_1p  | auto | 1       |
+|   choice_91_U      | -    | -    |        | choice_91      | ram_1p  | auto | 1       |
+|   choice_92_U      | -    | -    |        | choice_92      | ram_1p  | auto | 1       |
+|   choice_93_U      | -    | -    |        | choice_93      | ram_1p  | auto | 1       |
+|   choice_94_U      | -    | -    |        | choice_94      | ram_1p  | auto | 1       |
+|   choice_95_U      | -    | -    |        | choice_95      | ram_1p  | auto | 1       |
+|   choice_96_U      | -    | -    |        | choice_96      | ram_1p  | auto | 1       |
+|   choice_97_U      | -    | -    |        | choice_97      | ram_1p  | auto | 1       |
+|   choice_98_U      | -    | -    |        | choice_98      | ram_1p  | auto | 1       |
+|   choice_99_U      | -    | -    |        | choice_99      | ram_1p  | auto | 1       |
+|   choice_100_U     | -    | -    |        | choice_100     | ram_1p  | auto | 1       |
+|   choice_101_U     | -    | -    |        | choice_101     | ram_1p  | auto | 1       |
+|   choice_102_U     | -    | -    |        | choice_102     | ram_1p  | auto | 1       |
+|   choice_103_U     | -    | -    |        | choice_103     | ram_1p  | auto | 1       |
+|   choice_104_U     | -    | -    |        | choice_104     | ram_1p  | auto | 1       |
+|   choice_105_U     | -    | -    |        | choice_105     | ram_1p  | auto | 1       |
+|   choice_106_U     | -    | -    |        | choice_106     | ram_1p  | auto | 1       |
+|   choice_107_U     | -    | -    |        | choice_107     | ram_1p  | auto | 1       |
+|   choice_108_U     | -    | -    |        | choice_108     | ram_1p  | auto | 1       |
+|   choice_109_U     | -    | -    |        | choice_109     | ram_1p  | auto | 1       |
+|   choice_110_U     | -    | -    |        | choice_110     | ram_1p  | auto | 1       |
+|   choice_111_U     | -    | -    |        | choice_111     | ram_1p  | auto | 1       |
+|   choice_112_U     | -    | -    |        | choice_112     | ram_1p  | auto | 1       |
+|   choice_113_U     | -    | -    |        | choice_113     | ram_1p  | auto | 1       |
+|   choice_114_U     | -    | -    |        | choice_114     | ram_1p  | auto | 1       |
+|   choice_115_U     | -    | -    |        | choice_115     | ram_1p  | auto | 1       |
+|   choice_116_U     | -    | -    |        | choice_116     | ram_1p  | auto | 1       |
+|   choice_117_U     | -    | -    |        | choice_117     | ram_1p  | auto | 1       |
+|   choice_118_U     | -    | -    |        | choice_118     | ram_1p  | auto | 1       |
+|   choice_119_U     | -    | -    |        | choice_119     | ram_1p  | auto | 1       |
+|   choice_120_U     | -    | -    |        | choice_120     | ram_1p  | auto | 1       |
+|   choice_121_U     | -    | -    |        | choice_121     | ram_1p  | auto | 1       |
+|   choice_122_U     | -    | -    |        | choice_122     | ram_1p  | auto | 1       |
+|   choice_123_U     | -    | -    |        | choice_123     | ram_1p  | auto | 1       |
+|   choice_124_U     | -    | -    |        | choice_124     | ram_1p  | auto | 1       |
+|   choice_125_U     | -    | -    |        | choice_125     | ram_1p  | auto | 1       |
+|   choice_126_U     | -    | -    |        | choice_126     | ram_1p  | auto | 1       |
+|   choice_127_U     | -    | -    |        | choice_127     | ram_1p  | auto | 1       |
++--------------------+------+------+--------+----------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------+------------------------------------------------------------------------+
+| Type            | Options                                  | Location                                                               |
++-----------------+------------------------------------------+------------------------------------------------------------------------+
+| array_partition | variable=choice block factor=16 dim=2    | Decoder/Size510ZEDBoard/directives.tcl:8 in trellisbuilder, choice     |
+| array_partition | variable=ppMT complete dim=1             | Decoder/Size510ZEDBoard/directives.tcl:9 in trellisbuilder, ppMT       |
+| array_partition | variable=prevState block factor=16 dim=2 | Decoder/Size510ZEDBoard/directives.tcl:12 in trellisbuilder, prevState |
+| interface       | ap_ctrl_none port=return                 | Decoder/Size510ZEDBoard/directives.tcl:6 in trellisbuilder, return     |
+| unroll          |                                          | Decoder/Size510ZEDBoard/directives.tcl:14 in trellisbuilder            |
++-----------------+------------------------------------------+------------------------------------------------------------------------+
+
+
