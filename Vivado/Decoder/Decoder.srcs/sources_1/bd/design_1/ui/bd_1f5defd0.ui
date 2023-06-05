@@ -1,0 +1,33 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.799515",
+   "Default View_TopLeft":"-224,-223",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_clk_100MHz -pg 1 -lvl 0 -x -20 -y 180 -defaultsOSRD
+preplace port port-id_reset_rtl_0 -pg 1 -lvl 0 -x -20 -y 160 -defaultsOSRD
+preplace port port-id_Outdecode_o_ap_vld_0 -pg 1 -lvl 3 -x 810 -y 20 -defaultsOSRD
+preplace portBus In_EncodeStream_0 -pg 1 -lvl 0 -x -20 -y 40 -defaultsOSRD
+preplace portBus Outdecode_i_0 -pg 1 -lvl 0 -x -20 -y 60 -defaultsOSRD
+preplace portBus Outdecode_o_0 -pg 1 -lvl 3 -x 810 -y 40 -defaultsOSRD
+preplace inst TrellisBuilder_0 -pg 1 -lvl 1 -x 220 -y 30 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -x 220 -y 170 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -x 610 -y 100 -defaultsOSRD
+preplace netloc clk_wiz_clk_out1 1 0 2 10 240 420
+preplace netloc clk_wiz_locked 1 1 1 430 140n
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 0 3 20 260 NJ 260 790
+preplace netloc clk_100MHz_1 1 0 1 NJ 180
+preplace netloc reset_rtl_0_1 1 0 2 0 250 440J
+preplace netloc In_EncodeStream_0_1 1 0 1 NJ 40
+preplace netloc Outdecode_i_0_1 1 0 1 NJ 60
+preplace netloc TrellisBuilder_0_Outdecode_o 1 1 2 440J 0 780J
+preplace netloc TrellisBuilder_0_Outdecode_o_ap_vld 1 1 2 420J -10 790J
+levelinfo -pg 1 -20 220 610 810
+pagesize -pg 1 -db -bbox -sgen -240 -60 1020 270
+"
+}
+{
+   "da_board_cnt":"3",
+   "da_clkrst_cnt":"1"
+}
