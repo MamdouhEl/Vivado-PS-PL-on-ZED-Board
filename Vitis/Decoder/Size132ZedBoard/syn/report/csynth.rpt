@@ -1,0 +1,184 @@
+
+
+================================================================
+== Synthesis Summary Report of 'TrellisBuilder'
+================================================================
++ General Information: 
+    * Date:           Mon Oct 10 12:59:13 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        Decoder
+    * Solution:       Size132ZedBoard (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+----+-----------+-------------+-----+
+    |                    Modules                   |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |      |    |           |             |     |
+    |                    & Loops                   |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |     LUT     | URAM|
+    +----------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+----+-----------+-------------+-----+
+    |+ TrellisBuilder                              |  Timing|  -0.83|      262|  1.666e+03|         -|      263|     -|        no|     -|   -|  5894 (5%)|  19913 (37%)|    -|
+    | + TrellisBuilder_Pipeline_TrellisLoop        |  Timing|  -0.83|      108|    686.880|         -|      108|     -|        no|     -|   -|  4929 (4%)|  14369 (27%)|    -|
+    |  o TrellisLoop                               |      II|   4.64|      106|    674.160|        13|        2|    48|       yes|     -|   -|          -|            -|    -|
+    | + TrellisBuilder_Pipeline_VITIS_LOOP_1453_1  |       -|   0.26|      147|    934.920|         -|      147|     -|        no|     -|   -|  487 (~0%)|    3634 (6%)|    -|
+    |  o VITIS_LOOP_1453_1                         |      II|   4.64|      145|    922.200|        17|        3|    44|       yes|     -|   -|          -|            -|    -|
+    +----------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+----+-----------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* REGISTER
++-----------------+---------+----------+
+| Interface       | Mode    | Bitwidth |
++-----------------+---------+----------+
+| In_EncodeStream | ap_none | 144      |
+| Outdecode_i     | ap_none | 48       |
+| Outdecode_o     | ap_none | 48       |
++-----------------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+--------+
+| Interface | Type         | Ports  |
++-----------+--------------+--------+
+| ap_clk    | clock        | ap_clk |
+| ap_rst    | reset        | ap_rst |
+| ap_ctrl   | ap_ctrl_none |        |
++-----------+--------------+--------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------------+-----------+--------------+
+| Argument        | Direction | Datatype     |
++-----------------+-----------+--------------+
+| In_EncodeStream | in        | ap_uint<144> |
+| Outdecode       | inout     | ap_uint<48>& |
++-----------------+-----------+--------------+
+
+* SW-to-HW Mapping
++-----------------+--------------------+---------+
+| Argument        | HW Interface       | HW Type |
++-----------------+--------------------+---------+
+| In_EncodeStream | In_EncodeStream    | port    |
+| Outdecode       | Outdecode_i        | port    |
+| Outdecode       | Outdecode_o        | port    |
+| Outdecode       | Outdecode_o_ap_vld | port    |
++-----------------+--------------------+---------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| Name                                         | DSP | Pragma | Variable     | Op  | Impl   | Latency |
++----------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| + TrellisBuilder                             | 0   |        |              |     |        |         |
+|  + TrellisBuilder_Pipeline_TrellisLoop       | 0   |        |              |     |        |         |
+|    add_ln45_fu_10452_p2                      | -   |        | add_ln45     | add | fabric | 0       |
+|    sub_ln43_fu_10474_p2                      | -   |        | sub_ln43     | sub | fabric | 0       |
+|    count000_V_1_fu_10863_p2                  | -   |        | count000_V_1 | add | fabric | 0       |
+|    add_ln45_1_fu_10480_p2                    | -   |        | add_ln45_1   | add | fabric | 0       |
+|    count000_V_3_fu_10876_p2                  | -   |        | count000_V_3 | add | fabric | 0       |
+|    add_ln47_fu_10534_p2                      | -   |        | add_ln47     | add | fabric | 0       |
+|    count000_V_5_fu_11024_p2                  | -   |        | count000_V_5 | add | fabric | 0       |
+|    count001_V_1_fu_10687_p2                  | -   |        | count001_V_1 | add | fabric | 0       |
+|    count002_V_1_fu_10793_p2                  | -   |        | count002_V_1 | add | fabric | 0       |
+|    count002_V_3_fu_10806_p2                  | -   |        | count002_V_3 | add | fabric | 0       |
+|    count002_V_5_fu_10887_p2                  | -   |        | count002_V_5 | add | fabric | 0       |
+|    count010_V_1_fu_11193_p2                  | -   |        | count010_V_1 | add | fabric | 0       |
+|    count011_V_1_fu_10578_p2                  | -   |        | count011_V_1 | add | fabric | 0       |
+|    count011_V_3_fu_10591_p2                  | -   |        | count011_V_3 | add | fabric | 0       |
+|    count011_V_5_fu_10621_p2                  | -   |        | count011_V_5 | add | fabric | 0       |
+|    count012_V_1_fu_10812_p2                  | -   |        | count012_V_1 | add | fabric | 0       |
+|    count012_V_3_fu_10893_p2                  | -   |        | count012_V_3 | add | fabric | 0       |
+|    count013_V_3_fu_11074_p2                  | -   |        | count013_V_3 | add | fabric | 0       |
+|    count100_V_1_fu_11212_p2                  | -   |        | count100_V_1 | add | fabric | 0       |
+|    count101_V_1_fu_10597_p2                  | -   |        | count101_V_1 | add | fabric | 0       |
+|    count101_V_3_fu_10610_p2                  | -   |        | count101_V_3 | add | fabric | 0       |
+|    count101_V_5_fu_10639_p2                  | -   |        | count101_V_5 | add | fabric | 0       |
+|    count102_V_1_fu_10825_p2                  | -   |        | count102_V_1 | add | fabric | 0       |
+|    count102_V_3_fu_10910_p2                  | -   |        | count102_V_3 | add | fabric | 0       |
+|    count103_V_3_fu_11097_p2                  | -   |        | count103_V_3 | add | fabric | 0       |
+|    count110_V_1_fu_10927_p2                  | -   |        | count110_V_1 | add | fabric | 0       |
+|    count110_V_3_fu_10940_p2                  | -   |        | count110_V_3 | add | fabric | 0       |
+|    count110_V_5_fu_11108_p2                  | -   |        | count110_V_5 | add | fabric | 0       |
+|    count111_V_1_fu_10706_p2                  | -   |        | count111_V_1 | add | fabric | 0       |
+|    count112_V_1_fu_10838_p2                  | -   |        | count112_V_1 | add | fabric | 0       |
+|    count112_V_3_fu_10851_p2                  | -   |        | count112_V_3 | add | fabric | 0       |
+|    count112_V_5_fu_10951_p2                  | -   |        | count112_V_5 | add | fabric | 0       |
+|    mul_6ns_8ns_13_1_1_U2                     | -   |        | mul_ln251    | mul | auto   | 0       |
+|  + TrellisBuilder_Pipeline_VITIS_LOOP_1453_1 | 0   |        |              |     |        |         |
+|    add_ln1492_fu_3626_p2                     | -   |        | add_ln1492   | add | fabric | 0       |
+|    sub_ln1456_fu_3632_p2                     | -   |        | sub_ln1456   | sub | fabric | 0       |
+|    mul_6ns_8ns_13_1_1_U396                   | -   |        | mul_ln1065   | mul | auto   | 0       |
+|    k_1_fu_6001_p2                            | -   |        | k_1          | add | fabric | 0       |
++----------------------------------------------+-----+--------+--------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------+------+------+--------+----------------+---------+------+---------+
+| Name               | BRAM | URAM | Pragma | Variable       | Storage | Impl | Latency |
++--------------------+------+------+--------+----------------+---------+------+---------+
+| + TrellisBuilder   | 0    | 0    |        |                |         |      |         |
+|   prevState_V_U    | -    | -    |        | prevState_V    | ram_t2p | auto | 1       |
+|   prevState_V_1_U  | -    | -    |        | prevState_V_1  | ram_t2p | auto | 1       |
+|   prevState_V_2_U  | -    | -    |        | prevState_V_2  | ram_t2p | auto | 1       |
+|   prevState_V_3_U  | -    | -    |        | prevState_V_3  | ram_t2p | auto | 1       |
+|   prevState_V_4_U  | -    | -    |        | prevState_V_4  | ram_t2p | auto | 1       |
+|   prevState_V_5_U  | -    | -    |        | prevState_V_5  | ram_t2p | auto | 1       |
+|   prevState_V_6_U  | -    | -    |        | prevState_V_6  | ram_t2p | auto | 1       |
+|   prevState_V_7_U  | -    | -    |        | prevState_V_7  | ram_t2p | auto | 1       |
+|   prevState_V_8_U  | -    | -    |        | prevState_V_8  | ram_t2p | auto | 1       |
+|   prevState_V_9_U  | -    | -    |        | prevState_V_9  | ram_t2p | auto | 1       |
+|   prevState_V_10_U | -    | -    |        | prevState_V_10 | ram_t2p | auto | 1       |
+|   prevState_V_11_U | -    | -    |        | prevState_V_11 | ram_t2p | auto | 1       |
+|   prevState_V_12_U | -    | -    |        | prevState_V_12 | ram_t2p | auto | 1       |
+|   prevState_V_13_U | -    | -    |        | prevState_V_13 | ram_t2p | auto | 1       |
+|   prevState_V_14_U | -    | -    |        | prevState_V_14 | ram_t2p | auto | 1       |
+|   prevState_V_15_U | -    | -    |        | prevState_V_15 | ram_t2p | auto | 1       |
+|   prevState_V_16_U | -    | -    |        | prevState_V_16 | ram_t2p | auto | 1       |
+|   prevState_V_17_U | -    | -    |        | prevState_V_17 | ram_t2p | auto | 1       |
+|   prevState_V_18_U | -    | -    |        | prevState_V_18 | ram_t2p | auto | 1       |
+|   prevState_V_19_U | -    | -    |        | prevState_V_19 | ram_t2p | auto | 1       |
+|   prevState_V_20_U | -    | -    |        | prevState_V_20 | ram_t2p | auto | 1       |
+|   prevState_V_21_U | -    | -    |        | prevState_V_21 | ram_t2p | auto | 1       |
+|   prevState_V_22_U | -    | -    |        | prevState_V_22 | ram_t2p | auto | 1       |
+|   prevState_V_23_U | -    | -    |        | prevState_V_23 | ram_t2p | auto | 1       |
+|   prevState_V_24_U | -    | -    |        | prevState_V_24 | ram_t2p | auto | 1       |
+|   prevState_V_25_U | -    | -    |        | prevState_V_25 | ram_t2p | auto | 1       |
+|   prevState_V_26_U | -    | -    |        | prevState_V_26 | ram_t2p | auto | 1       |
+|   prevState_V_27_U | -    | -    |        | prevState_V_27 | ram_t2p | auto | 1       |
+|   prevState_V_28_U | -    | -    |        | prevState_V_28 | ram_t2p | auto | 1       |
+|   prevState_V_29_U | -    | -    |        | prevState_V_29 | ram_t2p | auto | 1       |
++--------------------+------+------+--------+----------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------+------------------------------------------------------------------------+
+| Type            | Options                                  | Location                                                               |
++-----------------+------------------------------------------+------------------------------------------------------------------------+
+| array_partition | variable=choice block factor=16 dim=2    | Decoder/Size132ZedBoard/directives.tcl:8 in trellisbuilder, choice     |
+| array_partition | variable=ppMT complete dim=1             | Decoder/Size132ZedBoard/directives.tcl:9 in trellisbuilder, ppMT       |
+| array_partition | variable=prevState block factor=16 dim=2 | Decoder/Size132ZedBoard/directives.tcl:12 in trellisbuilder, prevState |
+| interface       | ap_ctrl_none port=return                 | Decoder/Size132ZedBoard/directives.tcl:6 in trellisbuilder, return     |
+| unroll          |                                          | Decoder/Size132ZedBoard/directives.tcl:14 in trellisbuilder            |
++-----------------+------------------------------------------+------------------------------------------------------------------------+
+
+
