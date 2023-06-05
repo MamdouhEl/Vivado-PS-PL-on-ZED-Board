@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jun 13 21:42:39 2022
+# Process ID: 1228
+# Current directory: C:/Users/mamdouh/Decoder/Decoder.runs/impl_1
+# Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: C:/Users/mamdouh/Decoder/Decoder.runs/impl_1/design_1_wrapper.vdi
+# Journal file: C:/Users/mamdouh/Decoder/Decoder.runs/impl_1\vivado.jou
+# Running On: DESKTOP-O8CIAUJ, OS: Windows, CPU Frequency: 2893 MHz, CPU Physical cores: 1, Host memory: 8549 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace

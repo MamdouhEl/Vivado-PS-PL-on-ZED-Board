@@ -1,0 +1,90 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Mon Jun 13 21:44:03 2022
+| Host         : DESKTOP-O8CIAUJ running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7vx485t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    41 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    12 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              47 |           13 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              17 |            3 |
+| Yes          | No                    | No                     |              57 |           23 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               6 |            1 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+|            Clock Signal           |                                                                     Enable Signal                                                                    |                   Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/TrellisBuilder_0/inst/grp_TrellisBuilder_Pipeline_TrellisLoop_fu_497/choice_10_reg_9860                                                   |                                                      |                1 |              2 |         2.00 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/TrellisBuilder_0/inst/grp_TrellisBuilder_Pipeline_VITIS_LOOP_1452_1_fu_569/flow_control_loop_pipe_sequential_init_U/icmp_ln1452_fu_785_p2 |                                                      |                1 |              2 |         2.00 |
+|  design_1_i/clk_wiz/inst/clk_out1 |                                                                                                                                                      | design_1_i/rst_clk_wiz_100M/U0/EXT_LPF/lpf_int       |                1 |              4 |         4.00 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/TrellisBuilder_0/inst/grp_TrellisBuilder_Pipeline_TrellisLoop_fu_497/flow_control_loop_pipe_sequential_init_U/E[0]                        |                                                      |                3 |              4 |         1.33 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/TrellisBuilder_0/inst/grp_TrellisBuilder_Pipeline_VITIS_LOOP_1452_1_fu_569/flow_control_loop_pipe_sequential_init_U/p_11_in               |                                                      |                1 |              4 |         4.00 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/rst_clk_wiz_100M/U0/SEQ/seq_cnt_en                                                                                                        | design_1_i/rst_clk_wiz_100M/U0/SEQ/SEQ_COUNTER/clear |                1 |              6 |         6.00 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/TrellisBuilder_0/inst/ap_CS_fsm_state3                                                                                                    |                                                      |                1 |              8 |         8.00 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/TrellisBuilder_0/inst/ap_CS_fsm_state4                                                                                                    |                                                      |                2 |              8 |         4.00 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/TrellisBuilder_0/inst/grp_TrellisBuilder_Pipeline_TrellisLoop_fu_497/ap_enable_reg_pp0_iter1                                              |                                                      |                5 |              9 |         1.80 |
+|  design_1_i/clk_wiz/inst/clk_out1 |                                                                                                                                                      | design_1_i/rst_clk_wiz_100M/U0/peripheral_reset[0]   |                2 |             13 |         6.50 |
+|  design_1_i/clk_wiz/inst/clk_out1 | design_1_i/TrellisBuilder_0/inst/grp_TrellisBuilder_Pipeline_TrellisLoop_fu_497/flow_control_loop_pipe_sequential_init_U/z_fu_2600                   |                                                      |                9 |             20 |         2.22 |
+|  design_1_i/clk_wiz/inst/clk_out1 |                                                                                                                                                      |                                                      |               14 |             48 |         3.43 |
++-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+
+
