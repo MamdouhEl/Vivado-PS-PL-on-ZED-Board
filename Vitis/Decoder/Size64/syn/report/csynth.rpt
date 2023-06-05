@@ -1,0 +1,147 @@
+
+
+================================================================
+== Synthesis Summary Report of 'TrellisBuilder'
+================================================================
++ General Information: 
+    * Date:           Sun Jun 26 16:36:50 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        Decoder
+    * Solution:       Size64 (Vivado IP Flow Target)
+    * Product family: virtex7
+    * Target device:  xc7vx485t-ffg1761-3
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+------------+------------+-----+
+    |                    Modules                   | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |    |            |            |     |
+    |                    & Loops                   | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF     |     LUT    | URAM|
+    +----------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+------------+------------+-----+
+    |+ TrellisBuilder                              |     -|  0.26|       76|  836.000|         -|       77|     -|        no|     -|   -|  1592 (~0%)|   7335 (2%)|    -|
+    | + TrellisBuilder_Pipeline_TrellisLoop        |     -|  0.26|       10|  110.000|         -|       10|     -|        no|     -|   -|   279 (~0%)|   5470 (1%)|    -|
+    |  o TrellisLoop                               |     -|  8.03|        8|   88.000|         2|        1|     8|       yes|     -|   -|           -|           -|    -|
+    | + TrellisBuilder_Pipeline_VITIS_LOOP_1452_1  |     -|  1.70|       62|  682.000|         -|       62|     -|        no|     -|   -|  1239 (~0%)|  1807 (~0%)|    -|
+    |  o VITIS_LOOP_1452_1                         |     -|  8.03|       60|  660.000|         2|        1|    60|       yes|     -|   -|           -|           -|    -|
+    +----------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* REGISTER
++-----------------+---------+----------+
+| Interface       | Mode    | Bitwidth |
++-----------------+---------+----------+
+| In_EncodeStream | ap_none | 192      |
+| Outdecode_i     | ap_none | 64       |
+| Outdecode_o     | ap_none | 64       |
++-----------------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+--------+
+| Interface | Type         | Ports  |
++-----------+--------------+--------+
+| ap_clk    | clock        | ap_clk |
+| ap_rst    | reset        | ap_rst |
+| ap_ctrl   | ap_ctrl_none |        |
++-----------+--------------+--------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------------+-----------+--------------+
+| Argument        | Direction | Datatype     |
++-----------------+-----------+--------------+
+| In_EncodeStream | in        | ap_uint<192> |
+| Outdecode       | inout     | ap_uint<64>& |
++-----------------+-----------+--------------+
+
+* SW-to-HW Mapping
++-----------------+--------------------+---------+
+| Argument        | HW Interface       | HW Type |
++-----------------+--------------------+---------+
+| In_EncodeStream | In_EncodeStream    | port    |
+| Outdecode       | Outdecode_i        | port    |
+| Outdecode       | Outdecode_o        | port    |
+| Outdecode       | Outdecode_o_ap_vld | port    |
++-----------------+--------------------+---------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| Name                                         | DSP | Pragma | Variable     | Op  | Impl   | Latency |
++----------------------------------------------+-----+--------+--------------+-----+--------+---------+
+| + TrellisBuilder                             | 0   |        |              |     |        |         |
+|  + TrellisBuilder_Pipeline_TrellisLoop       | 0   |        |              |     |        |         |
+|    add_ln44_fu_5180_p2                       | -   |        | add_ln44     | add | fabric | 0       |
+|    sub_ln42_fu_5242_p2                       | -   |        | sub_ln42     | sub | fabric | 0       |
+|    count000_V_1_fu_5278_p2                   | -   |        | count000_V_1 | add | fabric | 0       |
+|    add_ln44_1_fu_5292_p2                     | -   |        | add_ln44_1   | add | fabric | 0       |
+|    count000_V_3_fu_5324_p2                   | -   |        | count000_V_3 | add | fabric | 0       |
+|    add_ln46_fu_5338_p2                       | -   |        | add_ln46     | add | fabric | 0       |
+|    count000_V_5_fu_5370_p2                   | -   |        | count000_V_5 | add | fabric | 0       |
+|    count001_V_1_fu_5384_p2                   | -   |        | count001_V_1 | add | fabric | 0       |
+|    count002_V_1_fu_5404_p2                   | -   |        | count002_V_1 | add | fabric | 0       |
+|    count002_V_3_fu_5418_p2                   | -   |        | count002_V_3 | add | fabric | 0       |
+|    count002_V_5_fu_5432_p2                   | -   |        | count002_V_5 | add | fabric | 0       |
+|    count010_V_1_fu_5438_p2                   | -   |        | count010_V_1 | add | fabric | 0       |
+|    count011_V_1_fu_5458_p2                   | -   |        | count011_V_1 | add | fabric | 0       |
+|    count011_V_3_fu_5472_p2                   | -   |        | count011_V_3 | add | fabric | 0       |
+|    count011_V_5_fu_5486_p2                   | -   |        | count011_V_5 | add | fabric | 0       |
+|    count012_V_1_fu_5500_p2                   | -   |        | count012_V_1 | add | fabric | 0       |
+|    count012_V_3_fu_5514_p2                   | -   |        | count012_V_3 | add | fabric | 0       |
+|    count013_V_3_fu_6098_p2                   | -   |        | count013_V_3 | add | fabric | 0       |
+|    count100_V_1_fu_5534_p2                   | -   |        | count100_V_1 | add | fabric | 0       |
+|    count101_V_1_fu_5554_p2                   | -   |        | count101_V_1 | add | fabric | 0       |
+|    count101_V_3_fu_5568_p2                   | -   |        | count101_V_3 | add | fabric | 0       |
+|    count101_V_5_fu_5582_p2                   | -   |        | count101_V_5 | add | fabric | 0       |
+|    count102_V_1_fu_5596_p2                   | -   |        | count102_V_1 | add | fabric | 0       |
+|    count102_V_3_fu_5610_p2                   | -   |        | count102_V_3 | add | fabric | 0       |
+|    count103_V_3_fu_6121_p2                   | -   |        | count103_V_3 | add | fabric | 0       |
+|    count110_V_1_fu_5630_p2                   | -   |        | count110_V_1 | add | fabric | 0       |
+|    count110_V_3_fu_5644_p2                   | -   |        | count110_V_3 | add | fabric | 0       |
+|    count110_V_5_fu_5658_p2                   | -   |        | count110_V_5 | add | fabric | 0       |
+|    count111_V_1_fu_5672_p2                   | -   |        | count111_V_1 | add | fabric | 0       |
+|    count112_V_1_fu_5692_p2                   | -   |        | count112_V_1 | add | fabric | 0       |
+|    count112_V_3_fu_5706_p2                   | -   |        | count112_V_3 | add | fabric | 0       |
+|    count112_V_5_fu_5720_p2                   | -   |        | count112_V_5 | add | fabric | 0       |
+|  + TrellisBuilder_Pipeline_VITIS_LOOP_1452_1 | 0   |        |              |     |        |         |
+|    add_ln1491_fu_1038_p2                     | -   |        | add_ln1491   | add | fabric | 0       |
+|    sub_ln1455_fu_1047_p2                     | -   |        | sub_ln1455   | sub | fabric | 0       |
+|    k_1_fu_2466_p2                            | -   |        | k_1          | add | fabric | 0       |
++----------------------------------------------+-----+--------+--------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------+---------------------------------------------------------------+
+| Type            | Options                                  | Location                                                      |
++-----------------+------------------------------------------+---------------------------------------------------------------+
+| array_partition | variable=choice complete dim=2           | Decoder/Size64/directives.tcl:8 in trellisbuilder, choice     |
+| array_partition | variable=ppMT complete dim=1             | Decoder/Size64/directives.tcl:9 in trellisbuilder, ppMT       |
+| array_partition | variable=prevState block factor=16 dim=2 | Decoder/Size64/directives.tcl:12 in trellisbuilder, prevState |
+| interface       | ap_ctrl_none port=return                 | Decoder/Size64/directives.tcl:6 in trellisbuilder, return     |
+| unroll          |                                          | Decoder/Size64/directives.tcl:14 in trellisbuilder            |
++-----------------+------------------------------------------+---------------------------------------------------------------+
+
+
